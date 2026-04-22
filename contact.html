@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - Milky Way</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      background: linear-gradient(135deg, #eef2f7, #ffffff);
+      font-family: 'Poppins', sans-serif;
+    }
+
+    /* NAVBAR */
+    .navbar {
+      backdrop-filter: blur(10px);
+      background: rgba(255,255,255,0.85) !important;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .navbar-brand {
+      font-weight: 700;
+      font-size: 1.4rem;
+    }
+
+    .nav-link {
+      font-weight: 500;
+      margin-right: 15px;
+      position: relative;
+    }
+
+    .nav-link::after {
+      content: "";
+      width: 0%;
+      height: 2px;
+      background: #0d6efd;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      transition: 0.3s;
+    }
+
+    .nav-link:hover::after {
+      width: 100%;
+    }
+
+    .form-control {
+      border-radius: 50px;
+    }
+
+    .btn-outline-success {
+      border-radius: 50px;
+    }
+
+    /* CONTACT HEADER */
+    .contact-header {
+      text-align: center;
+      padding: 60px 20px 20px;
+    }
+
+    .contact-header h1 {
+      font-weight: 700;
+      font-size: 2.5rem;
+    }
+
+    /* CARD STYLE */
+    .card-box {
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+      transition: 0.3s;
+    }
+
+    .card-box:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    }
+
+    /* FORM */
+    .form-control, .form-select {
+      border-radius: 10px;
+      padding: 10px;
+    }
+
+    textarea {
+      resize: none;
+    }
+
+    .btn-primary {
+      border-radius: 30px;
+      padding: 10px;
+      width: 100%;
+    }
+
+    /* FOOTER */
+    footer {
+      margin-top: 60px;
+      padding: 20px;
+      text-align: center;
+      background: #111;
+      color: white;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-light">
+  <div class="container-fluid">
+
+    <a class="navbar-brand" href="index.html">
+      <img src="logo.png" width="30" height="24">
+      Milky Way
+    </a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item"><a class="nav-link" href="product.html">Products</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+      </ul>
+
+      <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search">
+        <button class="btn btn-outline-success">Search</button>
+      </form>
+    </div>
+
+  </div>
+</nav>
+
+<!-- HEADER -->
+<div class="contact-header">
+  <h1>Contact Us</h1>
+  <p>We’re here to help. Reach out anytime.</p>
+</div>
+
+<!-- CONTENT -->
+<div class="container">
+  <div class="row g-4">
+
+    <!-- CONTACT INFO -->
+    <div class="col-md-5">
+      <div class="card-box">
+        <h4>Contact Information</h4>
+        <p><strong>Email:</strong> support@milkywayelectronics.com</p>
+        <p><strong>Phone:</strong> +1-800-555-TECH</p>
+        <p><strong>Location:</strong> Silicon Valley, CA</p>
+        <p><strong>Hours:</strong> Mon - Fri, 9 AM - 8 PM</p>
+      </div>
+    </div>
+
+    <!-- FORM -->
+    <div class="col-md-7">
+      <div class="card-box">
+        <h4>Send a Message</h4>
+
+        <form>
+          <div class="mb-3">
+            <input type="text" class="form-control" placeholder="Full Name" required>
+          </div>
+
+          <div class="mb-3">
+            <input type="email" class="form-control" placeholder="Email Address" required>
+          </div>
+
+          <div class="mb-3">
+            <select class="form-select" required>
+              <option value="">Select Inquiry</option>
+              <option>Order Status</option>
+              <option>Technical Support</option>
+              <option>Returns & Refunds</option>
+              <option>General Question</option>
+            </select>
+          </div>
+
+          <div class="mb-3">
+            <textarea class="form-control" rows="5" placeholder="Your Message..." required></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary">Send Message</button>
+        </form>
+
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 Milky Way | All Rights Reserved</p>
+</footer>
+
+<!-- Bootstrap -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
